@@ -6,7 +6,7 @@
   <title>김하늘 | 포트폴리오</title>
   <meta name="description" content="웹과 데이터를 배우며 기록하는 학습자 김하늘의 포트폴리오">
   <style>
-    :root { --accent: #0b7285; --soft: #e3fafc; --text: #1f2328; --muted: #59636e; --radius: 14px; }
+    :root { --accent: #6f42c1; --soft: #f3efff; --text: #1f2328; --muted: #59636e; --radius: 14px; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 70px; }
     body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
@@ -22,7 +22,8 @@
     main { max-width: 980px; margin: 0 auto; padding: 0 20px; }
     section { padding: 56px 0; border-bottom: 1px solid #f0f1f3; }
     #about { display: flex; align-items: center; gap: 40px; }
-    #about img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; background: var(--soft); flex-shrink: 0; }
+    .avatar { width: 150px; height: 150px; border-radius: 50%; background: var(--soft); color: var(--accent);
+              display: flex; align-items: center; justify-content: center; font-size: 2.6rem; font-weight: 700; flex-shrink: 0; }
     #about h1 { margin: 0; font-size: 2.3rem; }
     .lead { color: var(--muted); font-size: 1.1rem; margin: 6px 0 20px; }
     .btn { display: inline-block; padding: 10px 20px; border-radius: 999px; border: 2px solid var(--accent);
@@ -33,7 +34,7 @@
     .tags li { background: var(--soft); padding: 6px 14px; border-radius: 999px; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .card { border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 18px; }
-    .card img { border-radius: 10px; background: var(--soft); aspect-ratio: 16 / 9; width: 100%; object-fit: cover; }
+    .card { border-top: 6px solid var(--accent); }
     .card h3 { margin: 12px 0 6px; }
     .card p { margin: 0 0 10px; color: var(--muted); }
     footer { text-align: center; color: var(--muted); padding: 32px 20px; font-size: .9rem; }
@@ -60,7 +61,7 @@
 
   <main>
     <section id="about">
-      <img src="images/profile.jpg" alt="김하늘 프로필 사진" width="150" height="150">
+      <div class="avatar" role="img" aria-label="김하늘 이니셜">하늘</div>
       <div>
         <h1>김하늘</h1>
         <p class="lead">웹과 데이터를 배우며 기록하는 학습자</p>
@@ -83,19 +84,16 @@
       <h2>Projects</h2>
       <div class="cards">
         <article class="card">
-          <img src="images/project-1.png" alt="나의 첫 웹사이트 화면">
           <h3>나의 첫 웹사이트</h3>
           <p>GitHub Pages로 처음 게시한 한 페이지 사이트입니다.</p>
           <a href="https://drchoitest.github.io/my-first-site/">사이트 보기 →</a>
         </article>
         <article class="card">
-          <img src="images/project-2.png" alt="독감 유행 분석 그래프">
           <h3>독감 유행 분석</h3>
           <p>합성 데이터로 유행 시작 시점을 분석한 노트북입니다.</p>
           <a href="https://github.com/drchoitest/flu-season">저장소 보기 →</a>
         </article>
         <article class="card">
-          <img src="images/project-3.png" alt="예제 전자책 표지">
           <h3>예제 전자책</h3>
           <p>여러 파일로 만든 HTML 전자책입니다.</p>
           <a href="https://drchoitest.github.io/my-ebook/">전자책 읽기 →</a>
