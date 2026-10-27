@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김하늘 | 포트폴리오</title>
+  <meta name="description" content="웹과 데이터를 배우며 기록하는 학습자 김하늘의 포트폴리오">
+  <style>
+    :root { --accent: #0b7285; --soft: #e3fafc; --text: #1f2328; --muted: #59636e; --radius: 14px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+           color: var(--text); background: #fff; line-height: 1.7; }
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); }
+    header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; z-index: 10; }
+    nav { max-width: 980px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap;
+          justify-content: space-between; align-items: center; gap: 10px; }
+    nav .logo { font-weight: 700; text-decoration: none; color: var(--text); }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0; padding: 0; }
+    nav ul a { text-decoration: none; color: var(--muted); }
+    main { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 56px 0; border-bottom: 1px solid #f0f1f3; }
+    #about { display: flex; align-items: center; gap: 40px; }
+    #about img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; background: var(--soft); flex-shrink: 0; }
+    #about h1 { margin: 0; font-size: 2.3rem; }
+    .lead { color: var(--muted); font-size: 1.1rem; margin: 6px 0 20px; }
+    .btn { display: inline-block; padding: 10px 20px; border-radius: 999px; border: 2px solid var(--accent);
+           text-decoration: none; font-weight: 700; margin-right: 8px; }
+    .btn.main { background: var(--accent); color: #fff; }
+    h2 { font-size: 1.6rem; margin: 0 0 20px; }
+    .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; }
+    .tags li { background: var(--soft); padding: 6px 14px; border-radius: 999px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 18px; }
+    .card img { border-radius: 10px; background: var(--soft); aspect-ratio: 16 / 9; width: 100%; object-fit: cover; }
+    .card h3 { margin: 12px 0 6px; }
+    .card p { margin: 0 0 10px; color: var(--muted); }
+    footer { text-align: center; color: var(--muted); padding: 32px 20px; font-size: .9rem; }
+    @media (max-width: 700px) {
+      header { position: static; }
+      html { scroll-padding-top: 0; }
+      #about { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="#about">김하늘</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <img src="images/profile.jpg" alt="김하늘 프로필 사진" width="150" height="150">
+      <div>
+        <h1>김하늘</h1>
+        <p class="lead">웹과 데이터를 배우며 기록하는 학습자</p>
+        <a class="btn main" href="#projects">프로젝트 보기</a>
+        <a class="btn" href="#contact">연락하기</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git·GitHub</li>
+        <li>Python 기초</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="images/project-1.png" alt="나의 첫 웹사이트 화면">
+          <h3>나의 첫 웹사이트</h3>
+          <p>GitHub Pages로 처음 게시한 한 페이지 사이트입니다.</p>
+          <a href="https://drchoitest.github.io/my-first-site/">사이트 보기 →</a>
+        </article>
+        <article class="card">
+          <img src="images/project-2.png" alt="독감 유행 분석 그래프">
+          <h3>독감 유행 분석</h3>
+          <p>합성 데이터로 유행 시작 시점을 분석한 노트북입니다.</p>
+          <a href="https://github.com/drchoitest/flu-season">저장소 보기 →</a>
+        </article>
+        <article class="card">
+          <img src="images/project-3.png" alt="예제 전자책 표지">
+          <h3>예제 전자책</h3>
+          <p>여러 파일로 만든 HTML 전자책입니다.</p>
+          <a href="https://drchoitest.github.io/my-ebook/">전자책 읽기 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>(작성 예정)</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>문의는 <a href="https://github.com/drchoitest/ai-site/issues">이 저장소의 Issues</a>에 남겨 주세요.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 김하늘</footer>
+</body>
+</html>
